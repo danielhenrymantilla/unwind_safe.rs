@@ -1,0 +1,40 @@
+[package]
+name = "unwind_safe"
+version = "0.0.1"
+authors = [
+    "Daniel Henry-Mantilla <daniel.henry.mantilla@gmail.com>",
+]
+edition = "2018"
+
+license = "Zlib OR MIT OR Apache-2.0"
+
+documentation = "https://docs.rs/unwind_safe"
+repository = "https://github.com/danielhenrymantilla/unwind_safe.rs"
+homepage = "https://crates.io/crates/unwind_safe"
+
+readme = "README.md"
+
+description = "Readable unwind-safe code thanks to a try-finally-looking builder pattern"
+keywords = [
+    "unsafe",
+    "safety",
+    "unwind",
+    "exception",
+    "finally",
+]
+categories = [
+    "rust-patterns",
+]
+
+[features]
+nightly = []
+ui-tests = ["nightly"]
+
+[dev-dependencies]
+rand = "0.8.3"
+crossbeam = "0.8.0"
+
+[package.metadata.docs.rs]
+features = ["nightly"]
+
+[workspace]
