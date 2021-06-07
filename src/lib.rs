@@ -1,6 +1,5 @@
 #![cfg_attr(feature = "nightly",
-    feature(external_doc),
-    doc(include = "../README.md")
+    cfg_attr(all(), doc = include_str!("../README.md")),
 )]
 #![allow(nonstandard_style)]
 
@@ -105,5 +104,7 @@ impl<State, try_eval> RunnerWithTryEval<State, try_eval> {
 }
 
 #[cfg(all(doc, feature = "nightly"))]
-#[doc(include = "compile_fail_tests.md")]
+#[cfg_attr(all(doc, feature = "nightly"),
+    cfg_attr(all(), doc = include_str!("compile_fail_tests.md")),
+)]
 mod compile_fail_tests {}
