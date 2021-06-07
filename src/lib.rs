@@ -1,6 +1,5 @@
 #![cfg_attr(feature = "nightly",
-    feature(external_doc),
-    doc(include = "../README.md")
+    cfg_attr(all(), doc = include_str!("../README.md")),
 )]
 #![allow(nonstandard_style)]
 
