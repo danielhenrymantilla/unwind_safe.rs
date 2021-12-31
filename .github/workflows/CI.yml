@@ -95,4 +95,4 @@ jobs:
             RUSTC_BOOTSTRAP: 1
           with:
             command: test
-            args: --doc --features ui-tests -- --nocapture
+            args: --doc --features ui-tests -- --test-threads=1 --nocapture
