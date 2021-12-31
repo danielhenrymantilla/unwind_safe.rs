@@ -84,7 +84,7 @@ jobs:
           with:
             profile: default
             override: true
-            toolchain: nightly  # Once available: 1.54.0
+            toolchain: 1.54.0
 
         - name: Clone repo
           uses: actions/checkout@v2
